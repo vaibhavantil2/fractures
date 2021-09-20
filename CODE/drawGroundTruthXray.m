@@ -50,6 +50,7 @@ zoom on
 % The figure is displayed, you can zoom if necessary
 
 
+
 %% Select points,
 %       1 - lowest of the lunate,
 %       2 - edge of the radial
@@ -78,7 +79,11 @@ save(currentFile,'Xray','Xray_info','Xray_mask');
 clear               Xray Xray_info Xray_mask Xray_RGB LM_Y LM_X rows cols levs XL YL selectPoints drawMask current*
 close
 
+% allocate to current variables that will be used for saving later on
+ctscan                = currentData.ctscan;
+ctscan_info           = currentData.ctscan_info;
 
+[rows,cols,levs]    = size(ctscan);
 
 
 
